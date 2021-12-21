@@ -1,0 +1,10 @@
+<div>Counter : {{counter | async }}</div>
+<hr>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<button (click)="reset()">Reset</button>
+<hr>
+<form #form="ngForm" (submit)="setValue(form)">
+    <input type="submit" name="submit" value="Set To"/>
+    <input type="number" name="value" ngModel/>
+</form>
